@@ -4,7 +4,7 @@ Production grade ease of use fail-safe modularized fluent style framework provid
 ## What is it for?
 Pipe is a very low memory consuming possibility to transform data which is read from somewhere providing you an `InputStream` respectively `Reader` again after you transformation is applied. Similar holds for data which is written to somewhere. A typical example is an application of a **XSLT** to a **XML**. Also things like `deepCopy` where you maybe want to serialize some object and deserialize that serialized representation back to an object can be easily implemented using a pipe. 
 
-## Why you should use it?
+## Why should you use it?
 `PipedInputStream` and `PipedOutputStream` respectively `PipedReader` and `PipedWriter` can only be used with 2 different threads. That multi-threaded nature requires the programmer to take care of different aspects during writing the code using them.
 
 Otherwise you may end up with things like *broken pipe* or *infinite blocking*.
