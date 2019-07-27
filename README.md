@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/TypedBit/fluent-pipe.svg?branch=master)](https://travis-ci.com/TypedBit/fluent-pipe)
 # fluent-pipe
 Production grade ease of use fail-safe modularized fluent style framework providing a pipe, i.e. in case of stream variant a `PipedInputStream` connected with a `PipedOutputStream` in right manner.
 
