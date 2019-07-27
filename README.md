@@ -40,16 +40,16 @@ Here are some usage examples:
 
 ```java
 StreamPipeBuilder.create().defaultPipeSize()
-	.forOutput((o) -> {// this example does nothing here with OutputStream})
-	.forInput((i) -> {// this example does nothing here with InputStream})
+	.forOutput((o) -> {/* this example does nothing here with OutputStream */})
+	.forInput((i) -> {/* this example does nothing here with InputStream */})
 	.asyncWrite().get().call();
 ```
 ##### Define and execute later, await blocking
 
 ```java
 final Callable<Void> fluentPipe = StreamPipeBuilder.create().defaultPipeSize()
-	.forOutput((o) -> {// this example does nothing here with OutputStream})
-	.forInput((i) -> {// this example does nothing here with InputStream})
+	.forOutput((o) -> {/* this example does nothing here with OutputStream */})
+	.forInput((i) -> {/* this example does nothing here with InputStream */})
 	.asyncWrite().get();
 	
 // do some stuff, later...
@@ -61,8 +61,8 @@ fluentPipe.call();
 ```java
 final Supplier<Callable<Void>> fluentPipeSupplier =
 	StreamPipeBuilder.create().defaultPipeSize()
-	.forOutput((o) -> {// this example does nothing here with OutputStream})
-	.forInput((i) -> {// this example does nothing here with InputStream})
+	.forOutput((o) -> {/* this example does nothing here with OutputStream */})
+	.forInput((i) -> {/* this example does nothing here with InputStream */})
 	.asyncWrite();
 	
 // do some stuff, later...
@@ -75,7 +75,7 @@ fluentPipeSupplier.get().call();
 
 ```java
 MyObject result = StreamPipeBuilder.create().defaultPipeSize()
-	.forOutput((o) -> {// this example does nothing here with OutputStream})
+	.forOutput((o) -> {/* this example does nothing here with OutputStream */})
 	.mapInput((i) -> {
 		// this example does nothing here with InputStream
 		// and produces null as result object
@@ -88,7 +88,7 @@ MyObject result = StreamPipeBuilder.create().defaultPipeSize()
 
 ```java
 CompletableFuture<MyObject> fluentPipe = StreamPipeBuilder.create().defaultPipeSize()
-	.forOutput((o) -> {// this example does nothing here with OutputStream})
+	.forOutput((o) -> {/* this example does nothing here with OutputStream */})
 	.mapInput((i) -> {
 		// this example does nothing here with InputStream
 		// and produces null as result object
