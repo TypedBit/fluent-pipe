@@ -41,6 +41,8 @@ public interface ConsumedWriterPipeBuilder {
 	 * 
 	 * @param readerMapper
 	 *            {@link Function} which will be used by the pipe to process the {@link Reader} and produce a result.
+	 * @param <T>
+	 *            Type of the desired result object
 	 * @return configured builder instance
 	 */
 	public <T> ConsumedMappedPipeBuilder<T> mapReader(final Function<Reader, T> readerMapper);

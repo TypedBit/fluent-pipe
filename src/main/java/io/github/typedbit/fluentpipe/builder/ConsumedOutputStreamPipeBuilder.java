@@ -41,6 +41,8 @@ public interface ConsumedOutputStreamPipeBuilder {
 	 * 
 	 * @param inputStreamMapper
 	 *            {@link Function} which will be used by the pipe to process the {@link InputStream} and produce a result.
+	 * @param <T>
+	 *            Type of the desired result object
 	 * @return configured builder instance
 	 */
 	public <T> ConsumedMappedPipeBuilder<T> mapInput(final Function<InputStream, T> inputStreamMapper);
