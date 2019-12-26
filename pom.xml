@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.github.typedbit</groupId>
 	<artifactId>fluent-pipe</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>fluent-pipe</name>
 	<url>https://github.com/TypedBit/fluent-pipe</url>
 	<description>Provides ease of use fluent style framework to connect input and output via pipe.</description>
@@ -11,7 +11,8 @@
 		<connection>scm:git:https://github.com/TypedBit/${project.artifactId}.git</connection>
 		<developerConnection>scm:git:https://github.com/TypedBit/${project.artifactId}.git</developerConnection>
 		<url>https://github.com/TypedBit/${project.artifactId}</url>
-	</scm>
+	  <tag>fluent-pipe-1.0</tag>
+  </scm>
 	<properties>
 		<maven.compiler.release>9</maven.compiler.release>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
