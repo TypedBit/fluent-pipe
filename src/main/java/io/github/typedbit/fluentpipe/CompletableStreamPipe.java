@@ -21,7 +21,6 @@ import java.io.OutputStream;
 import java.io.PipedInputStream;
 import java.io.PipedOutputStream;
 import java.util.Objects;
-import java.util.concurrent.Callable;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executor;
@@ -34,10 +33,10 @@ import java.util.function.Supplier;
  * an {@link InputStream} which in fact will read the bytes written by the {@link Consumer}.
  * <p>
  * This implementation executes {@link Function#apply(Object)} of {@code inputStreamConsumer} <b>asynchronously</b> on the given {@link Executor}. {@link Consumer#accept(Object)}
- * operation of {@code outputStreamConsumer} is executed directly through this {@link Callable} which can be executed on a thread of your choice.
+ * operation of {@code outputStreamConsumer} is executed <b>asynchronously</b> on the given {@link Executor}.
  * </p>
  * <p>
- * Both methods are invoked only after {@link #call()} method of this {@link Callable} is being called.
+ * Both methods are invoked only after {@link #get()} method of this {@link Supplier} is being called.
  * </p>
  * 
  * @author Dieter König

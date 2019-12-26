@@ -21,7 +21,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 
 /**
- * Builder for a stream ({@link Reader} & {@link Writer}) based pipe.
+ * Builder for a stream ({@link Reader} and {@link Writer}) based pipe.
  * 
  * @author Dieter König
  */

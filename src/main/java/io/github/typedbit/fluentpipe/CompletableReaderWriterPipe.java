@@ -21,7 +21,6 @@ import java.io.PipedWriter;
 import java.io.Reader;
 import java.io.Writer;
 import java.util.Objects;
-import java.util.concurrent.Callable;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executor;
@@ -33,11 +32,11 @@ import java.util.function.Supplier;
  * Implementation of Pipe connecting a {@link Consumer} with a {@link Function}. The {@link Consumer} is writing to a {@link Writer} and the {@link Function} is reading from a
  * {@link Reader} which in fact will read the bytes written by the {@link Consumer}.
  * <p>
- * This implementation executes {@link Function#apply(Object)} of {@code inputStreamConsumer} <b>asynchronously</b> on the given {@link Executor}. {@link Consumer#accept(Object)}
- * operation of {@code writerConsumer} is executed directly through this {@link Callable} which can be executed on a thread of your choice.
+ * This implementation executes {@link Function#apply(Object)} of {@code readerMapper} <b>asynchronously</b> on the given {@link Executor}. {@link Consumer#accept(Object)}
+ * operation of {@code writerConsumer} is executed <b>asynchronously</b> on the given {@link Executor}.
  * </p>
  * <p>
- * Both methods are invoked only after {@link #call()} method of this {@link Callable} is being called.
+ * Both methods are invoked only after {@link #get()} method of this {@link Supplier} is being called.
  * </p>
  * 
  * @author Dieter König

@@ -23,7 +23,7 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.ForkJoinPool;
 
 /**
- * Builder for a stream ({@link InputStream} & {@link OutputStream}) or {@link Reader} & {@link Writer} based pipe.
+ * Builder for a stream ({@link InputStream} and {@link OutputStream}) or {@link Reader} and {@link Writer} based pipe.
  * 
  * @author Dieter König
  */

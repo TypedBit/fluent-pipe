@@ -20,7 +20,7 @@ import java.io.Reader;
 import java.io.Writer;
 
 /**
- * Builder for a stream ({@link Reader} & {@link Writer}) based pipe.
+ * Builder for a stream ({@link Reader} and {@link Writer}) based pipe.
  * 
  * @author Dieter König
  */
