@@ -3,7 +3,7 @@
 Production grade ease of use fail-safe modularized fluent style framework providing a pipe, i.e. in case of stream variant a `PipedInputStream` connected with a `PipedOutputStream` in right manner.
 
 ## What is it for?
-Pipe is a very low memory consuming possibility to transform data which is read from somewhere providing you an `InputStream` respectively `Reader` again after you transformation is applied. Similar holds for data which is written to somewhere. A typical example is an application of a **XSLT** to a **XML**. Also things like `deepCopy` where you maybe want to serialize some object and deserialize that serialized representation back to an object can be easily implemented using a pipe. 
+Pipe is a very low memory consuming possibility to transform data which is read from somewhere providing you an `InputStream` respectively `Reader` again after your transformation is applied. Similar holds for data which is written to somewhere. A typical example is an application of a **XSLT** to a **XML**. Also things like `deepCopy` where you maybe want to serialize some object and deserialize that serialized representation back to an object can be easily implemented using a pipe. 
 
 ## Why should you use it?
 `PipedInputStream` and `PipedOutputStream` respectively `PipedReader` and `PipedWriter` can only be used with 2 different threads. That multi-threaded nature requires the programmer to take care of different aspects during writing the code using them.
@@ -26,8 +26,8 @@ Here [fluent-pipe](https://github.com/TypedBit/fluent-pipe) comes in and cares a
 * obtain `java.util.function.Supplier` for your configured pipe and reuse logic defined only once
 * `java.util.concurrent.Callable` is also reusable
 * construct pipe instances by just one constructor call if you wish
-* Support of `InputSteam`/`OutputStream` API
-* Support of `Reader`/`Writer` API
+* support of `java.io.InputSteam`/`java.io.OutputStream` api
+* support of `java.io.Reader`/`java.io.Writer` api
 
 ## Usage
 > Write to the given OutputStream in some way. You don't need to worry about closing the OutputStream.
